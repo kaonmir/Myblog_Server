@@ -5,12 +5,8 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mysql = require('mysql');
 
-var option = {
-    host: 'myinstance.cvsejgvxoucu.us-east-2.rds.amazonaws.com',
-    user: 'admin',
-    password: '39tiwqow4j4!',
-    database: 'Contents'
-}
+const fs = require('fs');
+const option = JSON.parse(fs.readFileSync('db_info.json'));
 const db = mysql.createConnection(option);
 db.connect();
 

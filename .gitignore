@@ -352,3 +352,4 @@ MigrationBackup/
 *.sln
 *.gitattributes
 /package-lock.json
+/db_info.json
